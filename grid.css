@@ -1,0 +1,50 @@
+div{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 150px auto 100px;
+    grid-template-areas: 
+    "header header header"
+    "reklama section shrek"
+    "footer footer footer";
+}
+div > header{
+    display: grid;
+    place-content: center;
+    grid-area: header;
+}
+div > footer{
+    display: grid;
+    place-content: center;
+    grid-area: footer;
+}
+aside:nth-child(4){
+    display: grid;
+    grid-area: reklama;
+}
+aside:nth-child(2){
+    display: grid;
+    grid-area: shrek;
+
+}
+section{
+    display: grid;
+    grid-area: section;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nr1 nr1"
+    "nr2 nr2"
+    "nr3 nr4";
+}
+section > article:nth-child(1){
+    grid-area: nr1;
+}
+section > article:nth-child(2){
+    grid-area: nr2;
+}
+section > article:nth-child(3){
+    grid-area: nr3;
+}
+section > article:nth-child(4){
+    grid-area: nr4;
+}
